@@ -1,0 +1,27 @@
+[project]
+name = "audio-pcm-resampler"
+version = "0.1.0"
+description = "Audio resampler library for python. Can convert audio between different PCM audio formats."
+authors = [
+    {name = "Radovan Zivkovic",email = "ra.zivkovic@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10, <3.15"
+dependencies = [
+    "pydantic (>=2.12.5,<3.0.0)",
+    "numpy (==2.2.6)",
+    "soxr (>=1.0.0,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "audio_pcm_resampler", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.dependencies.audioop-lts]
+version = "~0.2.2"
+markers = "python_version >= '3.13'"
